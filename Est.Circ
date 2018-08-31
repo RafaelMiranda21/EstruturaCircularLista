@@ -1,0 +1,35 @@
+
+
+
+
+void inserir(tipo valor)
+{
+	int pos,i;
+	pos=inicio;
+
+
+while(pos!= fim && valor.chave >= elem[pos].chave)
+   pos = (pos+1) % n;
+
+if((pos-inicio + n) % n < (fim - pos + n) % n)
+{
+  for( i =inicio; i!=pos(i+1) % n)
+  {
+    elem[(i-1 + n) % n] = elem[i];
+  }
+  elem[(i-1 + n) % n] = valor;
+  inicio = (inicio - 1 + n) % n;	
+}
+
+else
+{
+	for(i = fim; i!=pos; i = (i - 1 + n) % n)
+	{
+		elem[i] = elem[(i-1 + n) % n]	
+	}
+	
+	elem[pos] = valor;
+	fim = (fim - 1) % n;
+}
+
+}
